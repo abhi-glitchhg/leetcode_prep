@@ -16,8 +16,9 @@ public:
     {
       for (j=1; j < numRows; j++)
       {
-        if (i == s.size())
+      if (i == s.size())
           break;
+
         res[j] += s[i];
         i++;
       }
@@ -30,9 +31,7 @@ public:
         res[j] += s[i];
         i++;
       }
-        
-        if(i == s.size())
-            break;
+    
     }
 
       string a = "";
