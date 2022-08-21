@@ -12,18 +12,23 @@
 class Solution {
 public:
     int sumNumbers(TreeNode* root) {
-    vector<int> lst;
+    vector<string> lst;
     int f=0;
-    travel(root, lst, f);
-    for (int ff: lst)
-        f+=ff;
+    string ff ; 
+    travel(root, lst, ff);
+    
+    for (string s:lst ){
+        int temp = stoi(s);
+        f+=temp;
+    }
     return f;
     }
     
-    void travel(TreeNode* node,vector<int>& lst, int s){
+    void travel(TreeNode* node,vector<string>& lst, string s){
         if (node == NULL)
             return ;
-         s = s*10 +  node->val;
+        char ch =  node->val+'0';
+         s = s + ch;
         if  ((node->left ==NULL) && (node->right == NULL))
             lst.push_back(s);
        
