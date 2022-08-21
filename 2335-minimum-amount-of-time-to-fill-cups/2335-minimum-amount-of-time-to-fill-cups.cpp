@@ -7,7 +7,7 @@ public:
             sort(amount.rbegin(), amount.rend());
             if (amount[0] == 0  ) break;
             else if (amount[1] == 0) { 
-                total+=amount[0]; 
+                total+=amount[0];
                 amount[0] = 0;
                 break;
                 }
