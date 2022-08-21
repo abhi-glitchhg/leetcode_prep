@@ -13,8 +13,6 @@ int untouched = 1;
             return untouched-1;
         }
         int to_be_returned = min(*val.begin(), untouched);
-        cout << *val.begin()<< untouched << endl;
-        //cout<< *val.begin() << *val.end()<< endl;
         if ( to_be_returned == untouched) untouched++;
         else 
           val.erase(to_be_returned);
@@ -24,8 +22,6 @@ int untouched = 1;
     void addBack(int num) {
         
         if (val.find(num) == val.end() && num< untouched ) val.insert(num);
-        for (int x:val)
-            cout << x<< " ";
     }
 };
 
