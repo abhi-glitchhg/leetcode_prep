@@ -14,12 +14,8 @@ public:
                     j++;
                     break;
                 }
-                if (j == t.size() -1){
-                    flag = false;
-                }
                 j++;
             if (j==t.size() && i!=s.size()-1){
-                //cout << "yeah" << endl;
                 flag= false;
             }
             
@@ -27,11 +23,9 @@ public:
                 break;
             }
             if (j == t.size()) flag= s[i] == t[j-1];
-            //cout << i<<j<<endl;
             if (flag == false)
                 break;
         }
-//        if (i)
         return flag;
     }
 };
