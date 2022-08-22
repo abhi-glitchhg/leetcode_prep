@@ -9,7 +9,6 @@ public:
         else if (s.size() == t.size()) return s==t;
         for (i=0;i<s.size(); i++){
             while(j<t.size()){ 
-            //    cout << i<<j<<endl;
                 if  (s[i] == t[j]) {
                     j++;
                     break;
