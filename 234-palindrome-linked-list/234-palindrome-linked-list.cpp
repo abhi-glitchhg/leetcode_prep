@@ -11,6 +11,7 @@
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
+        
         stack<int> stack_obj; 
         if (!head->next) return head;
         ListNode* copyhead = head;
