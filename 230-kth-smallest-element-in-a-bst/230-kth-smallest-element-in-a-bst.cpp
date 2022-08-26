@@ -14,7 +14,7 @@ public:
     int kthSmallest(TreeNode* root, int k) {
       int h = k;
       vector<int> lst;
-      travel(root, k,lst );
+      travel(root, k,lst);
      return lst[0];   
     }
     void travel(TreeNode* node,int& k, vector<int>& lst){
