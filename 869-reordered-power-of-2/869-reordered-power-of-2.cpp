@@ -17,26 +17,22 @@ public:
             string b = to_string(i);
             if (b.size() == true_size){ 
             for (char j: b)
-                OGmap[i][j]++;
-                }
+                OGmap[i][j]++;}
             
-            else if (b.size()>x.size())
-                break;
-        } 
-        
-        // here we only select the integers which have same size as the given number and hence reducing our search space.
-        int ans = 0;
-        int counter=0;
-        for (const auto f:OGmap){
-           
-            counter = 0;
-            for (auto const a:f.second){
+            int counter = 0;
+            for (auto const a:OGmap[i]){
                 if (lolmap[a.first] != a.second){ 
                     counter = 0;
                     break;}
                 else{
                     counter+= a.second;}}
-            if (counter==true_size)  return true;}
+            if (counter==true_size)  return true;
+            
+            if (b.size()>x.size())
+                break;} 
+        
+        // here we only select the integers which have same size as the given number and hence reducing our search space.
+
         return false;
         
         
