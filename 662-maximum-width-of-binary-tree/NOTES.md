@@ -1,1 +1,1 @@
-really nice approach; basically giving all nodes an individual number in nodes;
+really nice approach; basically giving all nodes an individual number in nodes; i copied from discussion as i was unable to find a good approach.
