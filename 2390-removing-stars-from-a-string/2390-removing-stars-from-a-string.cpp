@@ -4,8 +4,8 @@ public:
         if (s.find("*")>s.length()) return s;
         stack<char> q;
         for (char a:s){
-            if (q.empty() && a!='*') q.push(a);
-            else if (q.top() != '*' && a=='*'){
+            //if (q.empty() && a!='*') q.push(a);
+             if ( a=='*'){
                 q.pop();
                 //cout<<"hello1";
                 
