@@ -15,6 +15,7 @@ public:
         else if (p->val == root->val || q->val == root->val) return root;
         else if (p->val > root->val && q->val > root->val) root=root->right;
         else root=root->left;
+        
         return lowestCommonAncestor(root,p,q);
     }
 };
