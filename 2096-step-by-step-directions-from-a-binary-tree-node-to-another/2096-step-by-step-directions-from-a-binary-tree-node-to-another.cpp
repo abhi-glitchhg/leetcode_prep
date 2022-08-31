@@ -19,12 +19,12 @@ public:
         vector<char> path;
         bool a = travel(root,startValue,pp);
         bool b =travelwithpath(root, destValue,qq,path,-1);
-        for (int i:pp)
-        cout <<i<< " ";
-        cout<<endl;
-        for (int i:qq)
-        cout <<i<< " ";
-            int min_l = min(pp.size(), qq.size());
+        //for (int i:pp)
+        //cout <<i<< " ";
+        //cout<<endl;
+        //for (int i:qq)
+        //cout <<i<< " ";
+         int min_l = min(pp.size(), qq.size());
         
         
      if (find(pp.begin(), pp.end(), destValue) !=pp.end() || find(qq.begin(), qq.end(), startValue) != qq.end()) { 
@@ -33,8 +33,8 @@ public:
              reverse(path.begin(), path.end());
              //path.pop_back();
               //   reverse(path.begin(), path.end());
-              for  (char a:path)
-                 cout<<a<<endl;
+          //    for  (char a:path)
+          //       cout<<a<<endl;
              for (int i=0;i<qq.size()-pp.size();i++)
                  sol+=path[i];
              reverse(sol.begin(), sol.end());
