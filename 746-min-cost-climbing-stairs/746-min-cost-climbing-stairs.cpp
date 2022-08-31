@@ -21,9 +21,6 @@ public:
            b=c;
        }
        return min(a,b);
-       
-       
-       
     }
     
 };
