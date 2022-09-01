@@ -19,7 +19,7 @@ public:
     
     void travel(TreeNode* node, int max_, int& ans){
         if (node==NULL) return;
-        if (node->val>=max_) {ans=ans+1; cout << node->val << " is the good node" << max_ << " is max" << ans << " is count"<<endl; }
+        if (node->val>=max_) ans=ans+1;
         max_ = max(node->val, max_);
         travel(node->left, max_, ans);
         travel(node->right,max_,ans);
