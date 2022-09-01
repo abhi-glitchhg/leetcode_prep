@@ -1,3 +1,4 @@
+// used solution from discussion but my approach was similar only; 
 class Solution {
 public:
     int hIndex(vector<int>& c) {
