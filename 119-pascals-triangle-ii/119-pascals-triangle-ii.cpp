@@ -4,7 +4,7 @@ public:
         vector<int> ans;
         int i=0;
         int gg = rowIndex;
-        // n-i / i +1 formula for nc(i+1)/nci
+        // n-i / i +1 formula for nc(i+1)/nci jee adv PNC
         
         if (rowIndex==0)
             ans.push_back(1);
