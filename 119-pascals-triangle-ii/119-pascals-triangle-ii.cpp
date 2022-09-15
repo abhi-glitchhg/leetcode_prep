@@ -18,7 +18,7 @@ public:
                 ans.push_back((int)jj);
                 ///cout<<jj<< " ";
             }
-            cout<<i;
+            //cout<<i;
             if (rowIndex%2==1) i--;
             i--;
             for (;i>-1;i--){
