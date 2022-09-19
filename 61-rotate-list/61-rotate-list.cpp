@@ -11,9 +11,9 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
+        if (head == NULL) return head;
         
         vector<int> a;
-        if (head == NULL) return head;
         ListNode* ogHead = head;
         while(head!= NULL){
             a.push_back(head->val);
