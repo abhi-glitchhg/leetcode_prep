@@ -34,29 +34,23 @@ public:
             }
             return;
         }
+        currentpath.push_back(root->val);
+
         
-        else if (root->left!= NULL && root->right !=NULL){
+        if (root->left!= NULL && root->right !=NULL){
             vector<int> rightpath = currentpath;
-            rightpath.push_back(root->val);
-            currentpath.push_back(root->val);
             
             travel(root->left, ans, targetsum, currentpath);
             travel(root->right, ans, targetsum, rightpath);
         }
         
-        else if (root->left != NULL) {
-            //if (targetsum<root->left->val)
-            //    return;
-            currentpath.push_back(root->val);
+        else if (root->left != NULL)
             travel(root->left, ans, targetsum, currentpath);
-        }
         
-        else if (root->right != NULL) {
-            //if (targetsum<root->right->val)
-            //    return;
-            currentpath.push_back(root->val);
+        
+        else if (root->right != NULL)         
             travel(root->right, ans, targetsum, currentpath);
-        }
+        
             
     }
 };
