@@ -18,8 +18,8 @@ public:
                     if (stop1 && stop2) break;
                     
                     if (!stop1 && !stop2) if(dominoes[point2] == 'L' && dominoes[point1] == 'R') {sol+='.';break;}
-                     if (!stop2) if (dominoes[point2]=='L' && !stop2) {sol+='L';break;}
-                     if (!stop1) if (dominoes[point1]=='R' && !stop1) {sol+='R';break;}
+                     if (!stop2) if (dominoes[point2]=='L' ) {sol+='L';break;}
+                     if (!stop1) if (dominoes[point1]=='R' ) {sol+='R';break;}
                     point1--;
                     point2++;
                 }
