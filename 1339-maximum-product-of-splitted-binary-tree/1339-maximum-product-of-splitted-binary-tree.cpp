@@ -1,23 +1,9 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
 class Solution {
 public:
     int maxProduct(TreeNode* root) {
      int sol=0;
-        map<TreeNode*, int> mapping;
+        unordered_map<TreeNode*, int> mapping;
          sol=dfs(root, mapping);
-        //return sol;
-        //return mapping[root->left->right];
-        
         queue<TreeNode*> q;
         long int a = INT_MIN;
         int total_sum = mapping[root];
@@ -43,7 +29,7 @@ public:
         
     }
     
-    int dfs(TreeNode* head, map<TreeNode* , int> &mapping){
+    int dfs(TreeNode* head, unordered_map<TreeNode* , int> &mapping){
         if (head==NULL) return 0;
         
        return mapping[head]= head->val + dfs(head->left,mapping) + dfs(head->right, mapping);
