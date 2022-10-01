@@ -5,9 +5,9 @@ public:
         vector<vector<int>> ans;
         vector<int>path;
         path.push_back(0);
+        //unordered_map<int,bool>
         dfs(0,adc,ans,path);
         return ans;
-        
     }
     
     void dfs(int node, vector<vector<int>>&adjc, vector<vector<int>> &ans, vector<int> &path){
@@ -19,9 +19,6 @@ public:
                 if (i==adjc.size()-1) ans.push_back(path);
                 dfs(i, adjc,ans,path);
                 path.pop_back();
-            
-            
         }
-        
 }
 };
