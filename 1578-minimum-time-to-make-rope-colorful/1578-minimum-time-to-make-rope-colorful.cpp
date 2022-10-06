@@ -9,7 +9,6 @@ public:
                 ans+= neededTime[i] ;
                 max_ = max(max_,neededTime[i]);
                 stillprogress=true;
-                continue;
                 
             }
             else if (stillprogress){
@@ -19,7 +18,6 @@ public:
                 ans-=max_;
                 max_=0;
                 stillprogress = false;
-                continue;
             }
             
         }
