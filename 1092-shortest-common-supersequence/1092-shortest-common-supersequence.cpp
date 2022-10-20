@@ -1,9 +1,13 @@
+///used aditya verma lcs logics :) 
+
 class Solution {
 public:
     string shortestCommonSupersequence(string str1, string str2) {
         vector<vector<int>> table(str1.size()+1, vector<int>(str2.size()+1));
         int i,j;
         // all vals in table will be initialised as zero;
+        
+        
         for ( i=0;i<str1.size();i++)
             for ( j=0;j<str2.size();j++){
                 if (str1[i] == str2[j])
@@ -11,16 +15,10 @@ public:
                 else 
                     table[i+1][j+1] = max(table[i][j+1], table[i+1][j]);
             }
-        //cout<< table[i][j];
+    
         
         string lcs = "";
-        //cout<< i<<" " <<j;
-       /* for (auto ii:table)
-        {
-            for (auto jj: ii)
-                cout<<jj<< " ";
-            cout<<"\n";
-        }*/
+    
         j--; i--;
         while (i>=0 && j>=0){
             //cout<< i <<" " <<j <<"\n";
