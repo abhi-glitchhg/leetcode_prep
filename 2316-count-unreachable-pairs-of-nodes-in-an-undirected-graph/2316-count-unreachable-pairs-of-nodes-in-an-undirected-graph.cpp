@@ -4,8 +4,7 @@ public:
         
         unordered_map<int, vector<int>> adjc;
         vector<int> visited(n);
-        
-        vector<int> counts;
+        long long ans = (long long)(n) * (n-1) /2;
         for (auto i: edges){
             adjc[i[0]].push_back(i[1]);
             adjc[i[1]].push_back(i[0]);
@@ -16,23 +15,14 @@ public:
             {
                 int count=0;
                 dfs(i, adjc, visited, count);
-                counts.push_back(count);
+                ans-= ((long long)count) * (count-1)/2;
             }
             
         }
-        //sort(counts.begin(), counts.end());
-        
-        vector<int> summ;
-        int total=n;
-        for(auto i: counts){ 
-            summ.push_back(total- i);
-            total = total-i;
-            
-            }
-        long long ans=0;
-        for (int i=0;i<counts.size();i++)
-            ans+= ((long long)counts[i])* summ[i];
         return ans;
+        
+
+
     }
     
     void dfs(int from, unordered_map<int, vector<int>> &adjc, vector<int> &visited, int &count){
