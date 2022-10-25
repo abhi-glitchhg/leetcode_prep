@@ -20,7 +20,7 @@ public:
             }
             
         }
-        sort(counts.begin(), counts.end());
+        //sort(counts.begin(), counts.end());
         
         vector<int> summ;
         int total=n;
