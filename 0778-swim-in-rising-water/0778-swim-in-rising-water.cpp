@@ -11,6 +11,7 @@ public:
         int global_t = 0;
         
         int n= grid.size();
+        if (grid[n-1][n-1]==n*n -1) return n*n -1;
         priority_queue<int, vector<int>, greater<int> > pq;
         int max_occured=grid[0][0];
         int val=grid[0][0];
