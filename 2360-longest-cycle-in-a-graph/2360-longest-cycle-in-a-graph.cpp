@@ -11,12 +11,11 @@ public:
             counter=0;
             if (visited[i]==0)
                 dfs(i,edges,visited,dfsvisited,sol, domath,counter);
-                //cout<< counter<<" "<<sol<<" \n";} 
             ans = max(ans,counter);
         }
         if (ans==0) return -1;
             
-        return ans+1;
+        return ans;
     }
     
     void dfs(int index, vector<int> &edges, vector<int> &visited, vector<int> &dfsvisit, int &sol, bool &domath,int &counter){
@@ -31,8 +30,9 @@ public:
         else 
             if (visited[i]==1 && dfsvisit[i]==1)
             {domath=true; sol = i;}
-        if (index==sol) domath=false;
         if (domath) counter++;
+        if (index==sol) domath=false;
+        
         dfsvisit[index]=0;
         
     }
