@@ -16,10 +16,11 @@ public:
     
     
     int rec(int index, vector<int> &nums, vector<int> &g){
-        if (index==0) return 0;
+        
+        if (g[index]!=-1) return g[index];
+        if (index==0) return g[0]= 0;
         int cur = nums[index];
         int og_index=index;
-        if (g[index]!=-1) return g[index];
         int ans = 0;
         while (index>0){
             index--;
